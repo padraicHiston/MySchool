@@ -17,7 +17,10 @@ namespace MySchool.Models
         public string Address { get; set; }
 
         [Required]
-        public string County { get; set; }
+        public County County { get; set; }
+
+        [Display(Name = "County")]
+        public byte CountyId { get; set; }
 
         [Required]
         public string PhoneNumber { get; set; }

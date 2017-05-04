@@ -1,0 +1,34 @@
+﻿@model IEnumerable<MySchool.Models.School>
+
+@{
+    ViewBag.Title = "Schools";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Schools</h2>
+
+@if (!Model.Any())
+{
+    <p>We don't have any schools yet.</p>
+}
+else
+{
+    <table>
+        <thead>
+            <tr>
+                <th>Schools</th>
+                <th>County</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var school in Model)
+            {
+                <tr>
+                    <td>@school.Name</td>
+                    <td>@school.County.Name</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+

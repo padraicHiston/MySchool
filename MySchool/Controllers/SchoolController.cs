@@ -1,4 +1,6 @@
 ﻿using MySchool.Models;
+using System.Data.Entity;
+using System.Linq;
 using System.Web.Mvc;
 
 namespace MySchool.Controllers
@@ -20,7 +22,9 @@ namespace MySchool.Controllers
         // GET: School
         public ActionResult Index()
         {
-            return View();
+            var schools = _context.Schools.Include(s => s.County).ToList();
+
+            return View(schools);
         }
     }
 }
