@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace MySchool.Models
 {
@@ -24,9 +23,9 @@ namespace MySchool.Models
         [Required]
         public string Email { get; set; }
 
-        public List<Teacher> Teachers { get; set; }
-        public List<Pupil> Pupils { get; set; }
-        public List<Parent> Parents { get; set; }
+        //public List<Teacher> Teachers { get; set; }
+        //public List<Pupil> Pupils { get; set; }
+        //public List<Parent> Parents { get; set; }
         public int NumberOfBoys { get; set; }
         public int NumberOfGirls { get; set; }
         public int TotalPupilPopulation { get; set; }
