@@ -178,6 +178,14 @@
     <Compile Include="Migrations\201705041304277_InitialModel.Designer.cs">
       <DependentUpon>201705041304277_InitialModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705041331350_AddCountyModel.cs" />
+    <Compile Include="Migrations\201705041331350_AddCountyModel.Designer.cs">
+      <DependentUpon>201705041331350_AddCountyModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705041334345_PopulateCounties.cs" />
+    <Compile Include="Migrations\201705041334345_PopulateCounties.Designer.cs">
+      <DependentUpon>201705041334345_PopulateCounties.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\County.cs" />
@@ -262,6 +270,12 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201705041304277_InitialModel.resx">
       <DependentUpon>201705041304277_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705041331350_AddCountyModel.resx">
+      <DependentUpon>201705041331350_AddCountyModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705041334345_PopulateCounties.resx">
+      <DependentUpon>201705041334345_PopulateCounties.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
