@@ -4,6 +4,8 @@ namespace MySchool.Models
 {
     public class School
     {
+        public int Id { get; set; }
+
         [Required]
         public string RollNumber { get; set; }
 
