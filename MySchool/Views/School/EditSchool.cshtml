@@ -1,0 +1,25 @@
+﻿@model MySchool.Models.School
+@{
+    ViewBag.Title = Model.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Model.Name</h2>
+
+@using (Html.BeginForm("Save", "School"))
+{
+    @Html.ValidationSummary(true, "Please fix the following errors highlighted in red.")
+    <div class="form-group">
+        @Html.LabelFor(s => s.Name)
+        @Html.TextBoxFor(s => s.Name, new { @class = "form-control" })
+        @Html.ValidationMessageFor(s => s.Name)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(s => s.Address)
+        @Html.TextBoxFor(s => s.Address, new { @class = "form-control" })
+        @Html.ValidationMessageFor(s => s.Address)
+    </div>
+    @Html.HiddenFor(s => s.Id)
+    <button type="submit" class="btn btn-primary">Save</button>
+}
+

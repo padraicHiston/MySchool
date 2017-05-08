@@ -24,7 +24,7 @@ else
             @foreach (var school in Model)
             {
                 <tr>
-                    <td>@school.Name</td>
+                    <td>@Html.ActionLink(school.Name, "EditSchool", "School", new { id = school.Id }, null)</td>
                     <td>@school.County.Name</td>
                 </tr>
             }

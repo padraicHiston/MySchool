@@ -26,5 +26,28 @@ namespace MySchool.Controllers
 
             return View(schools);
         }
+
+        public ActionResult EditSchool(int id)
+        {
+            var school = _context.Schools.SingleOrDefault(s => s.Id == id);
+
+            if (school == null)
+            {
+                return HttpNotFound();
+            }
+
+
+            return View(school);
+        }
+
+        public ActionResult Save(School school)
+        {
+            if (!ModelState.IsValid)
+            {
+                return RedirectToAction("EditSchool", "School");
+            }
+
+            return RedirectToAction("Index", "School");
+        }
     }
 }
