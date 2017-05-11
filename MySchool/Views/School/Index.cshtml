@@ -7,16 +7,18 @@
 
 <h2>Schools</h2>
 
+@Html.ActionLink("Add School", "AddSchool", "School", null, new { @class="btn btn-primary"})
+
 @if (!Model.Any())
 {
     <p>We don't have any schools yet.</p>
 }
 else
 {
-    <table>
+    <table class="table table-bordered table-hover">
         <thead>
             <tr>
-                <th>Schools</th>
+                <th>School</th>
                 <th>County</th>
             </tr>
         </thead>

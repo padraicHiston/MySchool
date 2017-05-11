@@ -1,0 +1,20 @@
+﻿@using System.Web.Mvc.Html
+@model MySchool.Models.School
+@{
+    ViewBag.Title = Model.Name;
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="col-md-6">
+    <h2>@Model.Name</h2>
+    <p>Address: @Model.Address</p>
+    <p>Roll Number: @Model.RollNumber</p>
+    <p>Enrolment: Boys - @Model.NumberOfBoys, Girls - @Model.NumberOfGirls</p>
+    <p>Number of Teachers: @Model.NumberOfTeachers</p>
+
+    @Html.ActionLink("Edit", "EditSchool", "School", new { id = Model.Id }, new { @class = "btn btn-primary"})
+</div>
+<div class="col-md-6">
+    <img src="/Images/@Model.ImageFileName" alt="@Model.Name" />
+</div>
+

@@ -190,14 +190,40 @@
     <Compile Include="Migrations\201705081406227_UpdateDB.Designer.cs">
       <DependentUpon>201705081406227_UpdateDB.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201705111201182_AddSchoolImageCol.cs" />
+    <Compile Include="Migrations\201705111201182_AddSchoolImageCol.Designer.cs">
+      <DependentUpon>201705111201182_AddSchoolImageCol.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705111227030_AddEthosToSchools.cs" />
+    <Compile Include="Migrations\201705111227030_AddEthosToSchools.Designer.cs">
+      <DependentUpon>201705111227030_AddEthosToSchools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705111254419_AddEthosToDb.cs" />
+    <Compile Include="Migrations\201705111254419_AddEthosToDb.Designer.cs">
+      <DependentUpon>201705111254419_AddEthosToDb.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705111258184_DropEthosFromSchools.cs" />
+    <Compile Include="Migrations\201705111258184_DropEthosFromSchools.Designer.cs">
+      <DependentUpon>201705111258184_DropEthosFromSchools.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705111309409_AddEthosId.cs" />
+    <Compile Include="Migrations\201705111309409_AddEthosId.Designer.cs">
+      <DependentUpon>201705111309409_AddEthosId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201705111313594_PopulateEthos.cs" />
+    <Compile Include="Migrations\201705111313594_PopulateEthos.Designer.cs">
+      <DependentUpon>201705111313594_PopulateEthos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\County.cs" />
+    <Compile Include="Models\Ethos.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\School.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModels\SchoolFormViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Data\aspnet-MySchool-20170504105142.mdf" />
@@ -211,6 +237,7 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\lisnafunchin.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
@@ -261,6 +288,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\School\Index.cshtml" />
     <Content Include="Views\School\EditSchool.cshtml" />
+    <Content Include="Views\School\SchoolProfile.cshtml" />
+    <Content Include="Views\School\SchoolForm.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
@@ -283,6 +312,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201705081406227_UpdateDB.resx">
       <DependentUpon>201705081406227_UpdateDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111201182_AddSchoolImageCol.resx">
+      <DependentUpon>201705111201182_AddSchoolImageCol.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111227030_AddEthosToSchools.resx">
+      <DependentUpon>201705111227030_AddEthosToSchools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111254419_AddEthosToDb.resx">
+      <DependentUpon>201705111254419_AddEthosToDb.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111258184_DropEthosFromSchools.resx">
+      <DependentUpon>201705111258184_DropEthosFromSchools.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111309409_AddEthosId.resx">
+      <DependentUpon>201705111309409_AddEthosId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201705111313594_PopulateEthos.resx">
+      <DependentUpon>201705111313594_PopulateEthos.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

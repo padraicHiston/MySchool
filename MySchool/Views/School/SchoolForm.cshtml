@@ -1,35 +1,44 @@
-﻿@model MySchool.Models.School
+﻿@model MySchool.ViewModels.SchoolFormViewModel
+
 @{
-    ViewBag.Title = Model.Name;
+    ViewBag.Title = Model.Title;
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Edit School - @Model.Name</h2>
+<h2>@Model.Title</h2>
 
 @using (Html.BeginForm("Save", "School"))
 {
-    @Html.ValidationSummary(true, "Please fix the following errors highlighted in red.")
     <div class="form-group">
         @Html.LabelFor(s => s.Name)
         @Html.TextBoxFor(s => s.Name, new { @class = "form-control" })
-        @Html.ValidationMessageFor(s => s.Name)
     </div>
     <div class="form-group">
         @Html.LabelFor(s => s.Address)
         @Html.TextBoxFor(s => s.Address, new { @class = "form-control" })
-        @Html.ValidationMessageFor(s => s.Address)
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(s => s.CountyId)
+        @Html.DropDownListFor(s => s.CountyId, new SelectList(Model.Counties, "Id", "Name"), "Select County", new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(s => s.RollNumber)
+        @Html.TextBoxFor(s => s.RollNumber, new { @class = "form-control" })
+    </div>
+    <div class="form-group">
+        @Html.LabelFor(s => s.EthosId)
+        @Html.DropDownListFor(s => s.EthosId, new SelectList(Model.Ethos, "Id", "Name"), "Select Ethos", new { @class = "form-control" })
     </div>
     <div class="form-group">
         @Html.LabelFor(s => s.PhoneNumber)
         @Html.TextBoxFor(s => s.PhoneNumber, new { @class = "form-control" })
-        @Html.ValidationMessageFor(s => s.PhoneNumber)
     </div>
     <div class="form-group">
         @Html.LabelFor(s => s.Email)
         @Html.TextBoxFor(s => s.Email, new { @class = "form-control" })
-        @Html.ValidationMessageFor(s => s.Email)
     </div>
     @Html.HiddenFor(s => s.Id)
     <button type="submit" class="btn btn-primary">Save</button>
+
 }
 

@@ -16,9 +16,10 @@ namespace MySchool.Models
         [Required]
         public string Address { get; set; }
 
-        [Required]
+        
         public County County { get; set; }
 
+        [Required]
         [Display(Name = "County")]
         public byte CountyId { get; set; }
 
@@ -35,5 +36,17 @@ namespace MySchool.Models
         public int NumberOfGirls { get; set; }
         public int TotalPupilPopulation { get; set; }
         public int NumberOfTeachers { get; set; }
+
+        
+        public Ethos Ethos { get; set; }
+
+        [Required]
+        [Display(Name = "Ethos")]
+        public byte EthosId { get; set; }
+
+        public string ImageFileName
+        {
+            get { return Name.Replace(" ", "").ToLower() + ".jpg"; }
+        }
     }
 }
